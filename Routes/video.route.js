@@ -12,4 +12,5 @@ router.get('/:userId/channel', getAllVideoByUserId)
 
 
 
+
 export default router;
