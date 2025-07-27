@@ -37,7 +37,7 @@ export const login = async (req,res)=>{
         if(user && await bcrypt.compare(password, user.password)){
             const token = jwt.sign({userId: user._id}, "secretKey")
             res.cookie('token', token, cookieOptions)
-            res.json({message: "login successfully", token})
+            res.json({message: "login successfully", token, user})
         } else{
             res.status(400).json({error: "invalid credentials"})
         }
