@@ -7,8 +7,8 @@ import Video from '../Models/video.js'
 export const uploadVideo = async (req, res) => {
     try{
         const {title, description, videoLink, videoType, thumbnail} = req.body
-        console.log(req.user._conditions._id)
-        const videoUpload = new Video({user: req.user._conditions._id, title, description, videoLink, videoType, thumbnail})
+        console.log(req.user._id)
+        const videoUpload = new Video({user: req.user._id, title, description, videoLink, videoType, thumbnail})
         await videoUpload.save()
         res.status(201).json({success: "true", videoUpload})
 

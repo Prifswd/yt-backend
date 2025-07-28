@@ -1,16 +1,20 @@
 
-import express from 'express'
-import { addComment, getCommentByVideoId } from '../Controllers/comment.controller.js'
-import {auth} from '../middleware/auth.middleware.js'
+import express from 'express';
+import {
+  addComment,
+  getCommentByVideoId,
+  deleteComment,
+  updateComment
+} from '../Controllers/comment.controller.js';
+import { auth } from '../middleware/auth.middleware.js';
+
+const router = express.Router();
 
 
-const router = express.Router()
+router.post('/comment', auth, addComment);
+router.get('/comment/:videoId', getCommentByVideoId);
+router.put('/comment/:id', auth, updateComment);
+router.delete('/comment/:id', auth, deleteComment);
 
-
-router.post('/comment', auth, addComment)
-router.get('/comment/:videoId', getCommentByVideoId)
-
-
-
-export default router
+export default router;
 

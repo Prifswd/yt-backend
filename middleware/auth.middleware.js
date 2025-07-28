@@ -9,16 +9,13 @@ export const auth = async (req, res, next) =>{
     } else{
         try{
             const decode = jwt.verify(token, "secretKey")
-            req.user = User.findById(decode.userId).select('-password')
+            req.user = await User.findById(decode.userId).select('-password')
             next()
         }catch(err){
             res.status(401).json({error: "token not valid"})
         }
     }
 }
-
-
-
 
 
 
