@@ -78,6 +78,12 @@ Access the app at `http://localhost:5173` (or whichever port Vite provides).
 
 ---
 
+### 🎬 Project Demo Video ✅
+
+Project video demo link : https://drive.google.com/file/d/19BJVj3_eUglnE9GRKLtbE37u9ITBoG1_/view?usp=drive_link
+
+---
+
 ## 📤 API Endpoints Overview
 
 ### 🔐 Auth Routes
