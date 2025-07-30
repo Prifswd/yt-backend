@@ -52,6 +52,8 @@ This is a YouTube Clone built using the MERN stack – that’s MongoDB(Compass)
 
 ### 🔙 Backend Setup
 
+git clone https://github.com/Prifswd/yt-backend
+
 cd yt backend
 npm install
 
@@ -63,6 +65,8 @@ The backend should now be running at `http://localhost:8000`.
 ---
 
 ### 🎬 Frontend Setup
+
+git clone https://github.com/Prifswd/yt
 
 cd yt
 npm install
